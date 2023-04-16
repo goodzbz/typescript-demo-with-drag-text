@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
+    "start": "webpack-dev-server",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "keywords": [
     "typescript",
@@ -14,6 +15,15 @@
   "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "@webpack-cli/serve": "^2.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "lite-server": "^2.5.4",
+    "ts-loader": "^6.2.2",
+    "typescript": "^5.0.4",
+    "webpack": "^4.46.0"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.3"
   }
 }
